@@ -9,8 +9,9 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
 public class FileInfo {
-  String checkSum;
-  String absoluteFilePath;
+  private final String checkSum;
+  private final String absoluteFilePath;
+  private String registeredWithSet;
 
   public FileInfo(String filePath) throws ToolException {
     File f = new File(filePath);
@@ -22,6 +23,15 @@ public class FileInfo {
     }
     this.absoluteFilePath = f.getAbsolutePath();
     this.checkSum = calculateCheckSum(f);
+  }
+
+  public FileInfo(File f) throws ToolException {
+    this(f.getAbsolutePath());
+  }
+
+  public FileInfo(String fileName, String checkSum) {
+    this.absoluteFilePath = fileName;
+    this.checkSum = checkSum;
   }
 
   private String calculateCheckSum(File f) throws ToolException {
@@ -41,5 +51,17 @@ public class FileInfo {
     }
   }
 
+
+  public String getCheckSum() {
+    return checkSum;
+  }
+
+  public String getAbsoluteFilePath() {
+    return absoluteFilePath;
+  }
+
+  public String getRegisteredWithSet() {
+    return registeredWithSet;
+  }
 
 }
