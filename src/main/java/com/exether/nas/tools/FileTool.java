@@ -6,6 +6,8 @@ import java.util.Map;
 public class FileTool {
 
   public static void main(String[] argv) throws ToolException {
+    // TODO -cleanUpDB (remove non existing files)
+    // TODO -removeEmptyDirs
     if ("-deleteDuplicates".equals(argv[0])) {
       if (argv.length < 3) {
         usage();
@@ -17,7 +19,7 @@ public class FileTool {
     }
   }
 
-  private static String deleteDuplicates(String[] argv) throws ToolException {
+  public static String deleteDuplicates(String[] argv) throws ToolException {
     File fromFolder = getExistingFolder(argv[1]);
     if (fromFolder == null)
       return null;
@@ -32,7 +34,12 @@ public class FileTool {
     }
     fdb.save();
     Map<File, String> filesToDelete = fdb.getFilesToDelete(fromFolder);
-    return "";
+    StringBuilder commands = new StringBuilder();
+    for(Map.Entry<File, String> i: filesToDelete.entrySet()) {
+      commands.append("# ").append(i.getValue()).append("\n");
+      commands.append("rm \"").append(i.getKey().getAbsolutePath()).append("\"\n");
+    }
+    return commands.toString();
   }
 
   private static File getExistingFolder(String filename) {

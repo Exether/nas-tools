@@ -44,10 +44,12 @@ public class FileDatabase {
             newFront.add(sub);
           } else if (sub.isFile()) {
             FileInfo info;
-            if (databaseByFile.containsKey(sub.getAbsolutePath()))
+            if (databaseByFile.containsKey(sub.getAbsolutePath())) {
               info = databaseByFile.get(sub.getAbsolutePath()).get(0);
-            else {
+              info.setSet(folder);
+            } else {
               info = new FileInfo(sub);
+              info.setSet(folder);
               addFileInfo(databaseByFile, info.getAbsoluteFilePath(), info);
               addFileInfo(databaseByCheckSum, info.getCheckSum(), info);
             }

@@ -64,4 +64,7 @@ public class FileInfo {
     return registeredWithSet;
   }
 
+  public void setSet(File folder) {
+    registeredWithSet = folder.getAbsolutePath();
+  }
 }
