@@ -1,14 +1,21 @@
-# File is duplicate (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other1\fileD.txt) 
-rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileDprime.txt"
-# File is duplicate (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other2\fileEdup.txt,C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other1\fileEprime.txt)  WARNING
-rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileE.txt"
+# DB used 3 input folders.
+# DB contains 3267 different files.
+# DB contains 3211 different checksums.
+# File is duplicate within the input folder (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\afileG.txt)
+rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\bfileG.txt"
+# File is duplicate (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other1\fileBextra.txt) 
+rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileB.txt"
+# File is duplicate (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other2\fileCdup.txt) 
+rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileC.txt"
 # File is duplicate (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other2\fileCdup.txt) 
 rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileCprime.txt"
 # File is duplicate (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other1\fileD.txt) 
 rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileD.txt"
-# File is duplicate (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other1\fileBextra.txt) 
-rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileB.txt"
+# File is duplicate (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other1\fileD.txt) 
+rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileDprime.txt"
+# File is duplicate (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other2\fileEdup.txt,C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other1\fileEprime.txt)  WARNING
+rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileE.txt"
 # File is duplicate (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other2\fileEdup.txt,C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other1\fileEprime.txt)  WARNING
 rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileEprime.txt"
-# File is duplicate (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\other2\fileCdup.txt) 
-rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileC.txt"
+# File is duplicate within the input folder (keeping C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileF.txt)
+rm "C:\Users\jmarteau\OneDrive - Bottomline\Documents\40 - Perso\nas-tools\target\test-classes\from\fileFprime.txt"

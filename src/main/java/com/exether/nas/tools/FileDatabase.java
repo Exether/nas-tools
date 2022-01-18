@@ -128,7 +128,8 @@ public class FileDatabase {
     for (FileInfo info : files) {
       List<FileInfo> dups = databaseByCheckSum.get(info.getCheckSum());
       List<FileInfo> dupsFrom = dups.stream().filter(i -> setId.equals(i.getRegisteredWithSet()))
-          .sorted(Comparator.comparingInt(i -> info.getAbsoluteFilePath().length()).thenComparing(i -> info.getAbsoluteFilePath()))
+          .sorted(Comparator.comparingInt(i -> ((FileInfo)i).getAbsoluteFilePath().length())
+              .thenComparing(i -> ((FileInfo)i).getAbsoluteFilePath()))
           .collect(Collectors.toList());
       List<FileInfo> dupsOther = dups.stream().filter(i -> !setId.equals(i.getRegisteredWithSet())).collect(Collectors.toList());
       // Cases (from,other), (1,0), (n,0), (1,n), (n,m)
@@ -146,5 +147,13 @@ public class FileDatabase {
       }
     }
     return result;
+  }
+
+  public String getStatisticsAsComments() {
+    StringBuilder result = new StringBuilder();
+    result.append("# DB used ").append(folders.size()).append(" input folders.\n");
+    result.append("# DB contains ").append(databaseByFile.size()).append(" different files.\n");
+    result.append("# DB contains ").append(databaseByCheckSum.size()).append(" different checksums.\n");
+    return result.toString();
   }
 }
