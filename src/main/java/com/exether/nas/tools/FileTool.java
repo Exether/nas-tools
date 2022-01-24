@@ -6,12 +6,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * Jar has a manifest, execute with: java -jar $HOME/nas-tools-1.0-SNAPSHOT.jar [parameters ...]
+ */
 public class FileTool {
 
   public static void main(String[] argv) throws ToolException {
+    // TODO have a better command line management
     // TODO -cleanUpDB (remove non existing files)
     // TODO -deleteEmptyDirs (find . -type d -empty -print -delete)
     // TODO -normalizeFileNames (replace white spaces and diacritics)
+    if (argv.length == 0) {
+      usage();
+      return;
+    }
     if ("-deleteDuplicates".equals(argv[0])) {
       if (argv.length < 3) {
         usage();
